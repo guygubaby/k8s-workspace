@@ -35,5 +35,6 @@ def get_repos():
 
 
 if __name__ == "__main__":
-    app.run(debug=DEBUG,host=HOST,port=PORT)
-    
+  print('CLIENT_ID',CLIENT_ID)
+  print('HOST',HOST)
+  app.run(debug=DEBUG,host=HOST,port=PORT)
