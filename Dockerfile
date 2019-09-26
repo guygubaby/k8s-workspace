@@ -4,7 +4,7 @@ RUN adduser pyuser \
   && mkdir /app
 WORKDIR /app
 COPY requirements.txt /app
-RUN pip install --upgrade pip \
+RUN pip install --upgrade pip -i https://pypi.tuna.tsinghua.edu.cn/simple \
   && pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
 COPY . .
 RUN chmod +x app.py \
