@@ -11,4 +11,5 @@ RUN chmod +x app.py \
   && chown -R pyuser:pyuser /app
 USER pyuser
 EXPOSE 5000
-ENTRYPOINT ["python","app.py"]
+# ENTRYPOINT ["python","app.py"]
+ENTRYPOINT ["gunicorn", "app:app", "--config=config.py"]
