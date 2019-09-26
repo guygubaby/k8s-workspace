@@ -4,16 +4,16 @@ from github import Github
 import requests
 import os
 
-CLIENT_ID = os.environ['CLIENT_ID']
-CLIENT_SECRET = os.environ['CLIENT_SECRET']
-DEBUG = os.environ['DEBUG']
-HOST = os.environ['HOST']
-PORT = os.environ['PORT']
+# CLIENT_ID = os.environ['CLIENT_ID']
+# CLIENT_SECRET = os.environ['CLIENT_SECRET']
+# DEBUG = os.environ['DEBUG']
+# HOST = os.environ['HOST']
+# PORT = os.environ['PORT']
 
 app = Flask(__name__)
 
-# g = Github('6cb9009aeb137a0dec3f','1bb80b81c302fe954be667bfb5859086e0ef9593')
-g = Github(CLIENT_ID,CLIENT_SECRET)
+g = Github('6cb9009aeb137a0dec3f','1bb80b81c302fe954be667bfb5859086e0ef9593')
+# g = Github(CLIENT_ID,CLIENT_SECRET)
 
 
 
@@ -37,5 +37,6 @@ def get_repos():
 
 
 if __name__ == "__main__":
-    app.run(debug=DEBUG,host=HOST,port=PORT)
+    # app.run(debug=DEBUG,host=HOST,port=PORT)
+    app.run()
     
