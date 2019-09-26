@@ -1,7 +1,7 @@
 FROM python:3
 ENV PYTHONUNBUFFERED 1
 RUN adduser pyuser \
-  && mkdir /app \
+  && mkdir /app
 WORKDIR /app
 COPY requirements.txt /app
 RUN pip install --upgrade pip \
